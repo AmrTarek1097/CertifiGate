@@ -1,11 +1,19 @@
 import Image from "next/image";
+import React, { ReactNode } from 'react'
 import styles from "../SignUp/styles.module.css"
 import { IoLogoLinkedin } from "react-icons/io5";
 
-export default function SignUp() {
+type Props = {
+    children: ReactNode;
+};
+
+const SignUp: React.FC<Props> = ({ children }) => {
     return (
+        // *******background*******
         <main className=" flex min-h-screen items-center justify-between px-80 bg-[#F1F1F1] relative">
             <Image width={800} height={100} className="absolute top-0 right-0 z-0" src='/vectors/Certifigate background vector.svg' alt="vector" />
+
+            {/* *******Left Section******* */}
             <div className="flex flex-col gap-y-16 w-[496px]">
                 <div className="flex items-center gap-x-2" >
                     <Image width={40} height={20} src="/logo/logo blue.svg" alt="logo" />
@@ -29,6 +37,8 @@ export default function SignUp() {
                     <p className="text-black font-light text-sm">Verifying credentials is simple and reliable with our platform.</p>
                 </div>
             </div >
+
+            {/* *******Right Section******* */}
             <div className="bg-white py-16 px-8 rounded-2xl w-[562px] shadow-md z-10">
                 <div className="flex flex-col gap-y-16 text-center">
                     <div>
@@ -52,8 +62,10 @@ export default function SignUp() {
                     <p className="text-black text-xs font-light">By signing up, you agree to our <a className="underline" href="">Terms & Conditions</a> and <a className="underline" href="">Privacy Policy</a>, including Cookie Use</p>
                 </div>
             </div>
+
         </main >
     );
-
 }
+
+export default SignUp;
 
