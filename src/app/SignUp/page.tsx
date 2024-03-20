@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../SignUp/styles.module.css"
+import styles from "./styles.module.css"
 import { IoLogoLinkedin } from "react-icons/io5";
 
 export default function SignUp() {
