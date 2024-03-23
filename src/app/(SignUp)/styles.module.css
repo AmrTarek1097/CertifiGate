@@ -1,0 +1,63 @@
+.signUpEmail::after {
+    content: "";
+    height: 1px;
+    width: 32%;
+    top: 50%;
+    right: 2%;
+    position: absolute;
+    background-color: #656565;
+    border-radius: 10%;
+
+}
+
+.signUpEmail::before {
+    content: "";
+    height: 1px;
+    width: 32%;
+    top: 50%;
+    left: 2%;
+    position: absolute;
+    background-color: #656565;
+}
+
+.form_label {
+    font-size: 0.875rem
+        /* 14px */
+    ;
+    line-height: 1.25rem
+        /* 20px */
+    ;
+    font-weight: 500;
+    color: black;
+}
+
+.form_input {
+    width: 100%;
+    margin-top: 0.5rem
+        /* 8px */
+    ;
+    margin-bottom: 1rem
+        /* 16px */
+    ;
+    padding-left: 0.75rem
+        /* 12px */
+    ;
+    padding-right: 0.75rem
+        /* 12px */
+    ;
+    padding-top: 0.5rem
+        /* 8px */
+    ;
+    padding-bottom: 0.5rem
+        /* 8px */
+    ;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(117 118 130 / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    border-radius: 0.5rem
+        /* 8px */
+    ;
+
+}
