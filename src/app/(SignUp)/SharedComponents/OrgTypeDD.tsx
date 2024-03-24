@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import styles from "../../(SignUp)/styles.module.css"
 
 type Props = {
   selectedOrg: string;
@@ -21,7 +20,7 @@ const OrgTypeDD: React.FC<Props> = ({ selectedOrg, setSelectedOrg }) => {
   return (
     <div className="relative inline-block text-left w-full ">
       <label
-        className={styles.form_label}
+        className='form_label'
         htmlFor="name"
       >
         Organization type <span className="text-[#ed4141]">*</span>
@@ -29,7 +28,7 @@ const OrgTypeDD: React.FC<Props> = ({ selectedOrg, setSelectedOrg }) => {
       <button
         onClick={toggleMenu}
         type="button"
-        className={`${styles.form_input} focus:outline-none inline-flex justify-between w-full px-4 py-2 text-md font-medium text-gray-400 bg-white border  rounded-md`}
+        className={`form_input focus:outline-none inline-flex justify-between w-full px-4 text-md font-medium text-gray-400 bg-white border rounded-md`}
       >
         {selectedOrg}
         {isOpen ? (
@@ -40,7 +39,7 @@ const OrgTypeDD: React.FC<Props> = ({ selectedOrg, setSelectedOrg }) => {
       </button>
 
       {isOpen && (
-        <div className={`${styles.form_input} focus:outline-none absolute z-10 right-0 left-0 mt-2 origin-top-right bg-white border border-[#98A2B3] rounded-md shadow-lg ring-1 ring-black ring-opacity-5`}>
+        <div className={`form_input focus:outline-none absolute z-10 right-0 left-0 mt-2 origin-top-right bg-white border border-[#98A2B3] rounded-md shadow-lg ring-1 ring-black ring-opacity-5`}>
           <div className="py-1">
             {arr?.map((option, index) => {
               return (

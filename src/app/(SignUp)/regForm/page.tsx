@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from 'react'
-import styles from "../../(SignUp)/styles.module.css"
 import OrgTypeDD from "../SharedComponents/OrgTypeDD";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
@@ -59,42 +58,47 @@ const SignUpForm = () => {
 
             {/* *******Right Section******* */}
             <div className="flex flex-col text-center">
-                <div className="bg-white pb-16 pt-8 px-8 rounded-2xl w-[562px] shadow-md z-10">
-                    <div className="flex flex-col gap-y-6">
-                        <div className="text-left">
-                            <label className={styles.form_label} htmlFor="input-field">Email </label><span className="text-[#ed4141]">*</span>
-
-                            <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your email" />
+                <div className="bg-white py-8 px-8 rounded-2xl w-[562px] shadow-md z-10">
+                    <div className="flex flex-col gap-y-10">
+                        <div className="text-left gap-y-6 flex flex-col">
+                            <div>
+                                <label className='form_label' htmlFor="input-field">Email </label><span className="text-[#ed4141]">*</span>
+                                <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your email" />
+                            </div>
                             <div className="flex gap-6">
                                 <div>
-                                    <label className={styles.form_label} htmlFor="input-field">First Name</label> <span className="text-[#ed4141]">*</span>
-                                    <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your first name" />
+                                    <label className='form_label' htmlFor="input-field">First Name</label> <span className="text-[#ed4141]">*</span>
+                                    <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your first name" />
                                 </div>
                                 <div>
-                                    <label className={styles.form_label} htmlFor="input-field">Last Name</label> <span className="text-[#ed4141]">*</span>
-                                    <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your last name" />
+                                    <label className='form_label' htmlFor="input-field">Last Name</label> <span className="text-[#ed4141]">*</span>
+                                    <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your last name" />
                                 </div>
                             </div>
-                            <label className={styles.form_label} htmlFor="input-field">Phone number</label> <span className="text-[#ed4141]">*</span>
-                            <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your phone number" />
+                            <div>
+                                <label className='form_label' htmlFor="input-field">Phone number</label> <span className="text-[#ed4141]">*</span>
+                                <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your phone number" />
+                            </div>
 
                             <div className="w-full relative">
-                                <label className={styles.form_label} htmlFor="input-field">Password</label> <span className="text-[#ed4141]">*</span>
-                                <input id="input-field" type={showPass ? "password" : "text"} className={`${styles.form_input} focus:outline-none`} placeholder="enter your password" />
-                                <span className="eyeIcon absolute text-xl top-11 right-4 text-black cursor-pointer" onClick={() => setShowPass(!showPass)}>
+                                <label className='form_label' htmlFor="input-field">Password</label> <span className="text-[#ed4141]">*</span>
+                                <input id="input-field" type={showPass ? "password" : "text"} className={`form_input focus:outline-none`} placeholder="enter your password" />
+                                <span className="eyeIcon absolute text-xl top-9 right-4 text-black cursor-pointer" onClick={() => setShowPass(!showPass)}>
                                     {showPass ? <IoEyeOffOutline /> : <IoEyeOutline />}
                                 </span>
                             </div>
                             <div className="w-full relative">
-                                <label className={styles.form_label} htmlFor="input-field">Confirm password</label> <span className="text-[#ed4141]">*</span>
+                                <label className='form_label' htmlFor="input-field">Confirm password</label> <span className="text-[#ed4141]">*</span>
                                 <input id="input-field" type={showConfirmPass ? "password" : "text"}
-                                    className={`${styles.form_input} focus:outline-none`} placeholder="enter password again" />
-                                <span className="eyeIcon absolute text-xl top-11 right-4 text-black cursor-pointer" onClick={() => setShowConfirmPass(!showConfirmPass)}>
+                                    className={`form_input focus:outline-none`} placeholder="re-enter password " />
+                                <span className="eyeIcon absolute text-xl top-9 right-4 text-black cursor-pointer" onClick={() => setShowConfirmPass(!showConfirmPass)}>
                                     {showConfirmPass ? <IoEyeOffOutline /> : <IoEyeOutline />}
                                 </span>
                             </div>
-                            <label className={styles.form_label} htmlFor="input-field">Organization name</label> <span className="text-[#ed4141]">*</span>
-                            <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter organization name" />
+                            <div>
+                                <label className='form_label' htmlFor="input-field">Organization name</label> <span className="text-[#ed4141]">*</span>
+                                <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter organization name" />
+                            </div>
 
                             <OrgTypeDD
                                 selectedOrg={selectedOrg}
@@ -103,8 +107,8 @@ const SignUpForm = () => {
                             // displayCountryError={displayCountryError}
                             // setDisplayCountryError={setDisplayCountryError}
                             />
-                        </div>
 
+                        </div>
 
 
                         <Link href="/verifyEmail" ><button className="bg-[#002677] rounded-full w-full h-9 text-sm font-medium">Continue</button></Link>
@@ -112,7 +116,7 @@ const SignUpForm = () => {
 
                     </div>
                 </div>
-                <p className="text-black text-xs font-light mt-5">By signing up, you agree to our <a className="underline" href="">Terms & Conditions</a> and <a className="underline" href="">Privacy Policy</a>, including Cookie Use</p>
+                <p className="text-black  text-xs font-light mt-5 w-10/12 mx-auto">By signing up, you agree to our <a className="underline" href="">Terms & Conditions</a> and <a className="underline" href="">Privacy Policy</a>, including Cookie Use</p>
             </div >
         </>
     )

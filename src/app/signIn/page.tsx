@@ -3,11 +3,12 @@ import Link from "next/link";
 import React, { useState } from 'react'
 import styles from "../signIn/styles.module.css"
 import { IoLogoLinkedin } from "react-icons/io5";
-
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { MdCheckBox, MdCheckBoxOutlineBlank } from "react-icons/md";
 
 
 const SignIn = () => {
+    const [showPass, setShowPass] = useState(true);
 
     const [rememberMe, setRememberMe] = useState(false);
 
@@ -21,18 +22,20 @@ const SignIn = () => {
                         </div>
                         <div className="flex flex-col gap-6 text-left">
                             <div>
-                                <label className={styles.form_label} htmlFor="input-field">Email:</label>
-                                <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your email" />
+                                <label className='form_label' htmlFor="input-field">Email:</label>
+                                <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your email" />
                             </div>
-                            <div>
-                                <label className="text-sm font-medium text-black " htmlFor="input-field">Password:</label>
-                                <input id="input-field" type="password" className="w-full mt-2  px-3 py-2 border border-[#757682] text-black rounded-lg  focus:outline-none " placeholder="enter your email" />
+                            <div className="w-full relative">
+                                <label className='form_label ' htmlFor="input-field">Password:</label>
+                                <input id="input-field" type={showPass ? "password" : "text"} className={`form_input focus:outline-none`} placeholder="enter your password" />
+                                <span className="eyeIcon absolute text-xl top-9 right-4 text-black cursor-pointer" onClick={() => setShowPass(!showPass)}>
+                                    {showPass ? <IoEyeOffOutline /> : <IoEyeOutline />}
+                                </span>
                             </div>
 
 
 
                             <div className="flex flex-col gap-12 ">
-
                                 <div className="flex justify-between text-sm font-medium">
                                     <div className="flex items-center gap-2 text-black">
                                         {rememberMe ? <MdCheckBox className="w-[24px] h-[24px] cursor-pointer" onClick={() => setRememberMe(!rememberMe)} /> :
@@ -52,7 +55,7 @@ const SignIn = () => {
                                 </button>
                             </div>
                         </div>
-                        <p className="text-black text-sm font-medium">Don’t have an account? <Link className="text-[#002677]" href="/signUp">Sign up now</Link> </p>
+                        <p className="text-black text-sm font-medium">Don’t have an account? <Link className="text-[#002677]" href="/">Sign up now</Link> </p>
 
                     </div>
                 </div>

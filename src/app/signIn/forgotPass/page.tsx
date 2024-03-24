@@ -29,8 +29,8 @@ const ForgotPass = () => {
 
 
                         <div className="text-left">
-                            <label className={styles.form_label} htmlFor="input-field">Email:</label>
-                            <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your email" />
+                            <label className='form_label' htmlFor="input-field">Email:</label>
+                            <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your email" />
                         </div>
 
                         <button className="bg-[#002677] rounded-full w-full h-9 text-sm font-medium" onClick={alertShow}>Reset password</button>

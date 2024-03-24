@@ -48,9 +48,11 @@ const SignUp = () => {
 
                         <p className={`${styles.signUpEmail} text-[#656565] text-sm font-normal`}>or sign up with email</p>
                     </div>
-                    <div className="mb-4 text-left">
-                        <label className={styles.form_label} htmlFor="input-field">Email</label>
-                        <input id="input-field" type="text" className={`${styles.form_input} focus:outline-none`} placeholder="enter your email" />
+                    <div className="flex flex-col gap-4  text-left">
+                        <div>
+                            <label className='form_label' htmlFor="input-field">Email</label>
+                            <input id="input-field" type="text" className={`form_input focus:outline-none`} placeholder="enter your email" />
+                        </div>
                         <Link href="/regForm"> <button className="bg-[#F1F1F1] rounded-full w-full h-9 text-[#002677] text-sm font-medium">Continue</button></Link>
                     </div>
                     <p className="text-black text-sm font-medium">Already have an account? <Link className="text-[#002677]" href="/signIn">Sign in</Link> </p>

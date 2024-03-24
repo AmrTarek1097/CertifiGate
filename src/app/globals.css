@@ -34,3 +34,45 @@ body {
 .text-blue {
   color: var(--main-color);
 }
+
+.form_label {
+  font-size: 14px
+    /* 14px */
+  ;
+  line-height: 17px
+    /* 17px */
+  ;
+  font-weight: 500;
+  color: black;
+}
+
+.form_input {
+  width: 100%;
+  margin-top: 0.25rem
+    /* 8px */
+  ;
+  /* margin-bottom: 1rem */
+  /* 16px */
+  ;
+  padding-left: 0.75rem
+    /* 12px */
+  ;
+  padding-right: 0.75rem
+    /* 12px */
+  ;
+  padding-top: 0.3rem
+    /* 4.8px */
+  ;
+  padding-bottom: 0.3rem
+    /* 4.8px */
+  ;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(117 118 130 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  border-radius: 0.5rem
+    /* 8px */
+  ;
+
+}
